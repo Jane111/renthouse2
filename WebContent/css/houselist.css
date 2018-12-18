@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+p{padding:0;margin:0}
+
+img{padding:0;margin:0;border:0;vertical-align:top}
+i{font-style:normal;font-weight:normal}
+strong{font-style:normal;font-weight:normal}
+
+a{text-decoration:none;outline:0}
+a:hover{text-decoration:none}
+
+address{font-style:normal;font-weight:normal}
+
+@font-face{
+font-family:'iconfont';
+src:url("https://pages.anjukestatic.com/usersite/site/img/user/font20181112-02/iconfont.eot");
+src:url("https://pages.anjukestatic.com/usersite/site/img/user/font20181112-02/iconfont.eot?#iefix") 
+format('embedded-opentype'),url("https://pages.anjukestatic.com/usersite/site/img/user/font20181112-02/iconfont.woff") format('woff'),url("https://pages.anjukestatic.com/usersite/site/img/user/font20181112-02/iconfont.ttf") format('truetype'),url("https://pages.anjukestatic.com/usersite/site/img/user/font20181112-02/iconfont.svg#iconfont") format('svg')}
+
+.iconfont{display:inline-block;color:#000;text-align:center;font-style:normal;font-family:'iconfont'}
+.jjr-icon {
+color: #ccc;
+margin: 0 7px 0 20px;
+}
+
+
+.zu-itemmod
+{
+position:relative;
+height:135px;
+cursor:pointer;
+padding:20px;
+border-bottom:1px dashed #e6e6e6;
+background-color:#fff}
+
+.zu-itemmod:hover
+{
+background-color:#f9f9f9
+}
+
+.zu-itemmod .textlight
+{
+color:#eb6100;font-style:normal;font-weight:bold;padding-left:0!important;vertical-align:baseline}
+.zu-itemmod .img
+{float:left;width:180px;height:135px;position:relative}
+.zu-itemmod .img img
+{padding:0;margin:0;border:0;vertical-align:top}
+.zu-itemmod .many-icons{
+position:absolute;left:0;bottom:0;width:30px;height:24px;background:rgba(51,51,51,0.5);
+color:#fff;font-size:18px;line-height:24px}
+.zu-itemmod .zu-info
+{float:left;padding-left:20px;width:528px;overflow:hidden;font-size:14px;color:#797979}
+.zu-itemmod .zu-info h3
+{padding:0;margin:0;font-size:100%;font-weight:normal;
+height:34px;line-height:34px;margin-bottom:6px;}
+.zu-itemmod .zu-info h3 a
+{
+text-decoration:none;outline:0;
+color:#333;max-width:420px;font-size:16px;font-weight:bold;display:inline-block;
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zu-itemmod .zu-info h3 a:hover{
+text-decoration:underline;
+color:#745EC5;
+}
+.zu-itemmod .zu-info h3 span
+{display:inline-block;color:#fff;height:18px;padding:0 4px;font-size:12px;line-height:17px;
+margin:8px 0 0 6px;border-radius:2px;vertical-align:top}
+.zu-itemmod .zu-info h3 .green
+{background-color:#62ab00}
+.zu-itemmod .zu-info h3 .red
+{background-color:#eb5f00}
+.zu-itemmod .zu-info h3 .orange
+{border:1px solid #f60;color:#f60}
+.zu-itemmod .zu-info .details-item
+{width:440px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:30px;line-height:30px}
+.zu-itemmod .zu-info .details-item a
+{color: #666;}
+
+.zu-itemmod .zu-info .tag span
+{margin:0 10px;display:inline-block;margin-right:10px;width:1px;background:#ccc;height:10px;
+font-size:0;text-indent:-9999px;overflow:hidden}
+.zu-itemmod .zu-info .bot-tag em
+{padding-left:10px}
+.zu-itemmod .zu-info .bot-tag a
+{color:#007f00;text-decoration:none;outline:0}
+.zu-itemmod .zu-info .bot-tag a:hover{text-decoration:none}
+.zu-itemmod .zu-side
+{float:right;width:112px;white-space:nowrap}
+.zu-itemmod .zu-side p
+{width:100%;float:right;font-size:13px;color:#eb5f00;font-weight:bold;text-align:right;padding:40px 0 10px 0;padding:0;margin:0}
+.zu-itemmod .zu-side strong
+{font-size:22px;font-weight:bold;vertical-align:baseline;font-style:normal}
+.zu-itemmod .zu-side i
+{float:right;font-style:normal;font-weight:normal}
+.zu-top
+{width:842px;border:1px solid #ffe0cc;border-top-style:none;background-color:#fffcf7}
+.zu-top .icon-recommend
+{position:absolute;top:0;right:0;zoom:1}
+.zu-top .zu-info .bot-tag em
+{color:#f60}
+.zu-itemmod .zu-info .bot-tag span
+{float:left;padding:0 10px;line-height:22px;height:22px;font-size:12px;border-radius:16px;margin-right:10px;margin-top:8px}
+.zu-itemmod .zu-info .bot-tag .dt-info
+{color:#6682ae;padding-left:0;font-size:13px}
+.zu-itemmod .zu-info .bot-tag .dt-info i
+{color:#6682ae;vertical-align:-1px;margin-right:3px;font-size:13px;font-style:normal;font-weight:normal}
+.zu-itemmod .zu-info .bot-tag .cls-1
+{background-color:#fcf4f1;color:#e88a78}
+.zu-itemmod .zu-info .bot-tag .cls-2
+{background-color:#f2f6ed;color:#799374}
+.zu-itemmod .zu-info .bot-tag .cls-3
+{background-color:#f0f4f8;color:#6682ae}
