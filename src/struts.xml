@@ -11,16 +11,9 @@
 
 <package name="struts2" extends="struts-default">
 	
-	<action name="testQ" class = "com.houseDetails.action.houseDetailsAction">
-		<result name = "addsuccess">/details.jsp</result>   <!-- 名字必须和方法的返回值相同 -->
-		<result name = "showquestions">/details.jsp</result>   <!-- 名字必须和方法的返回值相同 -->
-		<result name = "showcomment">/questionDetails.jsp</result>   <!-- 名字必须和方法的返回值相同 -->
-		<result name = "showreply">/replyDetails.jsp</result>   <!-- 名字必须和方法的返回值相同 -->
-		<result name = "replylist">/details.jsp</result>   <!-- 名字必须和方法的返回值相同 -->
-		<!-- <result name = "showreplys">/enter.jsp</result>   --> <!-- 名字必须和方法的返回值相同 -->
-		<!--<result name = "showhouselist">/enter.jsp</result> -->  <!-- 名字必须和方法的返回值相同 -->
+	<action name="search" class = "com.renthouse.action.SearchAction">
+		<result name = "success">/search.jsp</result> 
 	</action>
-
 	
 </package>
 </struts>

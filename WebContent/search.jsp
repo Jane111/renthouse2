@@ -100,11 +100,13 @@
 	             '2000':'2000-2500 元','2500':'2500-3000 元','3000':'3000-3500 元','3500':'3500-4000 元',
 	             '4000':'4000-4500 元','4500':'4500-4500 元','5000':'5000 元以上'}" 
 	             cssStyle="color: #745ec5;padding-left:7px;padding-right:5px"></s:radio>
+	             
 	              <div class="custom"><span>自定义</span>&nbsp;
-	                <input type="text" id="custext1">
-	                &nbsp;-&nbsp;
-	                <input name="" type="text" id="custext2">
-	                <input name="" type="button" id="cusbtn">
+	                <input type="text" id="custext1" oninput="value=value.replace(/[^\d]/g,'')">&nbsp;-&nbsp;
+	                <input type="text" id="custext2" oninput="value=value.replace(/[^\d]/g,'')"><!-- 限定只能输入数字 -->
+	                <input value="确定" type="button" id="cusbtn">
+	              </div>
+	              
 	          </dl>
 
 	          <dl class="listIndex">
@@ -126,7 +128,9 @@
 	             cssStyle="color: #745ec5;padding-left:7px;padding-right:5px"></s:radio>
 	          </dl>         
 	        </div>
-	        <input type="submit" value="搜索">
+	        <input style="height:40px;margin:0px;padding:2px;float:right;background:#745EC5;color:#fff;border:none;font-size:22px;
+	        font-weight:bold;margin-top:10px;font-weight:bold;"
+	         type="submit" value="搜索">
 	      </form>   
 	    </div>
 
@@ -147,7 +151,57 @@
 	<!-- //search -->
 	
 	<!--information-->
-	<div class="w1200">
+	<div class="w1201">
+		<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
+	      <a 
+	        class="img"
+	        data-sign="true"
+	        href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+	        title="首月降800，每月返300，交通便利大智路保成社区北区"
+	        alt="首月降800，每月返300，交通便利大智路保成社区北区"
+	        target="_blank"
+	        hidefocus="true"
+	       ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
+	
+	            <img
+	                class="thumbnail"
+	                src="https://pic1.ajkimg.com/display/hj/39cde21bfe0b2a512a243fff98c44c57/240x180m.jpg?t=1"
+	                alt="首月降800，每月返300，交通便利大智路保成社区北区"
+	                width="180"
+	                height="135"
+	            />
+	            <span class="many-icons iconfont">&#xE062;</span>
+	        </a>
+	        <div class="zu-info">
+	            <h3>
+	                <a
+	                    target="_blank"
+	                    title="首月降800，每月返300，交通便利大智路保成社区北区"
+	                    _soj="Filter_1&hfilter=filterlist"
+	                    href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+	                >首月降800，每月返300，交通便利大智路保成社区北区</a>
+	             </h3>
+	            <p class="details-item tag">
+	                3室1厅<span>|</span>18平米<span>|</span>3/20层<i class="iconfont jjr-icon">&#xE147;</i>宋卫宇
+	            </p>
+	             <address class="details-item">
+	                    <a target="_blank"
+	                        href="https://wuhan.anjuke.com/community/view/846149">保成社区北区
+	                    </a>&nbsp;&nbsp;
+	                                                江岸-大智路 江汉二路133号  
+	             </address>
+	                <p class="details-item bot-tag clearfix">
+	                    <span class="cls-1">合租</span>
+	                    <span class="cls-2">朝南</span>
+	                     <span class="cls-3">1/2/6号线</span>
+	                </p>
+	        </div>
+	        <div class="zu-side">
+	            <p><strong>680</strong>元/月</p>
+	        </div>
+	  </div>
+	 </div>
+	 <div class="w1201">
 		<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
 	      <a 
 	        class="img"
