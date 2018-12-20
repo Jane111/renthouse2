@@ -13,6 +13,16 @@ var padioVal = '';
 var hadioVal = '';
 var tadioVal = '';
 
+
+function setNull() {
+	if((oCustext1.value!=''||oCustext2.value!='')&&radioVal.indexOf('元')==-1)//在action页面下如果输入框不为空，但没有按确定按钮，则清空
+	{
+    	oCustext1.value=null;
+        oCustext2.value=null;
+	}
+}
+
+
 oSelectList.onclick = function(e,a) {
 	
 //	console.log(a);
@@ -20,11 +30,13 @@ oSelectList.onclick = function(e,a) {
     var tag = ev.target || ev.srcElement;//实现浏览器兼容，获得事件源
     if(!tag)return;
     var tagName = tag.nodeName.toUpperCase();//标签名都变成大写
-    var infor = '';
+    var infor = '';//显示在搜索栏中的内容
     var aRadio = document.getElementsByName('price');
-    if( isCusPrice ) {//是否自定义价格
+    if( isCusPrice )
+    {//是否自定义价格
       radioVal = oCustext1.value + '-' + oCustext2.value + '元';//得到自定义的内容
-    } else {
+    } else 
+    {
       radioVal = '';
     }
     padioVal = '';
@@ -32,41 +44,88 @@ oSelectList.onclick = function(e,a) {
     tadioVal = '';
     
     if (tagName == 'INPUT') {//标签名
-//        if (tag.getAttribute('type').toUpperCase() == 'CHECKBOX') { //如果点击 的是 input checkbox
-//            var val = next(tag);//属性名
-//            if (tag.checked) {
-//                var sType = prev(parents(tag, 'dd')).innerHTML;
-//                val && okSelect.push(trim(val.innerHTML) + '|' + sType)
-//            } else {
-//                var sType = prev(parents(tag, 'dd')).innerHTML;
-//                delStr(val.innerHTML + '|' + sType, okSelect)//得到内容
+////        if (tag.getAttribute('type').toUpperCase() == 'CHECKBOX') { //如果点击 的是 input checkbox
+////            var val = next(tag);//属性名
+////            if (tag.checked) {
+////                var sType = prev(parents(tag, 'dd')).innerHTML;
+////                val && okSelect.push(trim(val.innerHTML) + '|' + sType)
+////            } else {
+////                var sType = prev(parents(tag, 'dd')).innerHTML;
+////                delStr(val.innerHTML + '|' + sType, okSelect)//得到内容
+////            }
+////        } else 
+//    	
+//    	if (tag.getAttribute('type').toUpperCase() == 'BUTTON') { //如果点击的是 自定义价格按钮
+//            radioVal = oCustext1.value + '-' + oCustext2.value + '元';
+//            isCusPrice = true;
+//
+//            for (var i = 0; i < aRadio.length; i++) {
+//                aRadio[i].checked = false;
 //            }
-//        } else 
-    	if (tag.getAttribute('type').toUpperCase() == 'BUTTON') { //如果点击的是 自定义价格按钮
-            radioVal = oCustext1.value + '-' + oCustext2.value + '元';
-            isCusPrice = true;
-
-            for (var i = 0; i < aRadio.length; i++) {
-                aRadio[i].checked = false;
-            }
-
-        }
+//
+//        }
+    	
+    	   if (tag.getAttribute('type').toUpperCase() == 'TEXT'||tag.getAttribute('type').toUpperCase() == 'TEXT')
+    	    {
+    	         for (var i = 0; i < aRadio.length; i++) {
+    	             aRadio[i].checked = false;
+    	         }	
+    	    }//实现在点击价格输入框时，清空单选框内的内容
+    	    
+    		if (tag.getAttribute('type').toUpperCase() == 'BUTTON') { //如果点击的是 自定义价格按钮
+    			//在两个输入框都有输入的时候，使其从小到大排列
+	    	      if(oCustext1.value!=null && oCustext2.value!=null && oCustext1.value!='' && oCustext2.value!='')//不为空的情况下才可以添加到搜索框
+	    	      {
+	    	    	  var temp;
+	    	    	  if(oCustext1.value>oCustext2.value)
+	    			 {
+	    					
+	    	    		temp=oCustext1.value;
+	    	    		oCustext1.value=oCustext2.value;
+	    	    		oCustext2.value=temp;
+	    	    		
+	    			 }	    				 
+	    	     }	
+//	    	      oCustext1.value!=null||oCustext2.value!=null || 
+    			if(oCustext1.value!=''||oCustext2.value!='')//不为空的情况下才可以添加到搜索框
+    			{
+    				 radioVal = oCustext1.value + '-' + oCustext2.value + '元';
+    	    	      isCusPrice = true;
+    	    	      for (var i = 0; i < aRadio.length; i++) {
+    	    	          aRadio[i].checked = false;
+    	    	      }	
+    			}
+    		}//实现点击“确定”按钮时，搜索选项出现在搜索框
     }
+    console.log(oCustext1.value!='');
+    console.log(oCustext1.value);
+    console.log(oCustext2.value!=null);
+    
+//    var url = window.location.href;//得到当前的网页的URL
+//    var dif=url.substring(url.lastIndexOf('.')+1, url.length);//得到是jsp还是action
+//    console.log(dif);
+
+       
+
+
+    
    
     for (var i = 0; i < aRadio.length; i++) {
         if (aRadio[i].checked) {
             radioVal = next(aRadio[i]).innerHTML;//得到具体的取值范围
             isCusPrice = false;
+            oCustext1.value=null;
+            oCustext2.value=null;
             break;
         }
     }
 //    console.log("radio"+radioVal);
-    if(a) {
-         isCusPrice = false;
-    }
-    if(a == 3) {//选中价格的删除时触发
+
+    if(a == 3) {//在下面的选择总栏，选中价格的删除时触发
         for (var i = 0; i < aRadio.length; i++) {
-            aRadio[i].checked = false;
+            aRadio[i].checked = false;//删除价格时，单选项全部清空
+            oCustext1.value=null;//输入框内清空
+            oCustext2.value=null;
         }           
     }
     else
@@ -79,14 +138,14 @@ oSelectList.onclick = function(e,a) {
     
     
     //区域的选择
-    var pRadio = document.getElementsByName('aera');
+    var pRadio = document.getElementsByName('area');
     for (var i = 0; i < pRadio.length; i++) {
         if (pRadio[i].checked) {
             padioVal = next(pRadio[i]).innerHTML;
             break;
         }
     }
-    if(a == 2) {//选中价格的删除时触发
+    if(a == 2) {//在下面的选择总栏，选中区域的删除时触发
         for (var i = 0; i < pRadio.length; i++) {
             pRadio[i].checked = false;
         }           
@@ -108,7 +167,7 @@ oSelectList.onclick = function(e,a) {
             break;
         }
     }
-    if(a == 4) {//选中价格的删除时触发
+    if(a == 4) {//在下面的选择总栏，选中厅室的删除时触发
         for (var i = 0; i < hRadio.length; i++) {
             hRadio[i].checked = false;
         }           
@@ -129,7 +188,7 @@ oSelectList.onclick = function(e,a) {
             break;
         }
     }
-    if(a == 5) {//选中价格的删除时触发
+    if(a == 5) {//选中租房类型的删除时触发
         for (var i = 0; i < tRadio.length; i++) {
             tRadio[i].checked = false;
         }           

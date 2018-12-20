@@ -33,27 +33,27 @@ public class House {        //房屋信息实体类
 //	private Set<Photo> setPhoto=new HashSet<Photo>();//一个房屋可以有多张照片
 //	private Set<Question> setQuestion=new HashSet<Question>();//一个房屋可以对应多个问题
 	
-	private User aUser;
-	private Community aCommunity;
+//	private User aUser;
+//	private Community aCommunity;
 	
 	
 	
 	
-	public User getaUser() {
-		return aUser;
-	}
-
-	public void setaUser(User aUser) {
-		this.aUser = aUser;
-	}
-
-	public Community getaCommunity() {
-		return aCommunity;
-	}
-
-	public void setaCommunity(Community aCommunity) {
-		this.aCommunity = aCommunity;
-	}
+//	public User getaUser() {
+//		return aUser;
+//	}
+//
+//	public void setaUser(User aUser) {
+//		this.aUser = aUser;
+//	}
+//
+//	public Community getaCommunity() {
+//		return aCommunity;
+//	}
+//
+//	public void setaCommunity(Community aCommunity) {
+//		this.aCommunity = aCommunity;
+//	}
 
 //	public Set<Collect> getSetCollect() {
 //		return setCollect;
