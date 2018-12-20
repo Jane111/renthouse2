@@ -15,6 +15,13 @@
 		<result name = "success">/search.jsp</result> 
 	</action>
 	
+	<action name="usercenter" class = "com.renthouse.action.UserCenterAction">
+		<!-- <result name = "getMyHouseListSuccess">/houses.jsp</result> -->
+		<result name = "getMyHouseListSuccess">/houses.jsp</result>
+		<result name = "getMyCollectListSuccess">/collect.jsp</result>
+		<result name = "getMyMessageListSuccess">/message.jsp</result>
+	</action>
+	
 </package>
 </struts>
 

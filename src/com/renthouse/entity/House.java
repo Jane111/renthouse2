@@ -27,6 +27,7 @@ public class House {        //房屋信息实体类
 	private String houseRoomType;
 	private Double houseRoomArea;
 	private Date houseAddTime;
+	private String houseAdvert;  //标题字段
 	
 	
 //	private Set<Collect> setCollect=new HashSet<Collect>();//一个房屋可以被多次收藏
@@ -36,9 +37,14 @@ public class House {        //房屋信息实体类
 //	private User aUser;
 //	private Community aCommunity;
 	
-	
-	
-	
+	public String getHouseAdvert() {
+		return houseAdvert;
+	}
+
+	public void setHouseAdvert(String houseAdvert) {
+		this.houseAdvert = houseAdvert;
+	}
+
 //	public User getaUser() {
 //		return aUser;
 //	}
@@ -272,6 +278,7 @@ public class House {        //房屋信息实体类
 		this.houseRoomType = houseRoomType;
 		this.houseRoomArea = houseRoomArea;
 		this.houseAddTime = houseAddTime;
+		this.houseAdvert = houseAdvert;
 	}
 	
 
