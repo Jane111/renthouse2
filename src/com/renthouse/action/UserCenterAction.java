@@ -9,6 +9,7 @@ import com.renthouse.entity.Collect;
 import com.renthouse.entity.House;
 import com.renthouse.entity.Question;
 import com.renthouse.entity.Reply;
+import com.renthouse.entity.User;
 
 public class UserCenterAction extends ActionSupport {
 
@@ -259,7 +260,7 @@ public class UserCenterAction extends ActionSupport {
 	/**  操作函数  **/
 	//获取个人信息
 	public String getUserInfo() {
-		User database=new Database();
+		Database database=new Database();
 		return "getUserInfoSuccess";
 	}
 	//修改个人信息
