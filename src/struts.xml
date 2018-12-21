@@ -17,7 +17,8 @@
 	</action>
 	
 	<action name="usercenter" class = "com.renthouse.action.UserCenterAction">
-		<!-- <result name = "getMyHouseListSuccess">/houses.jsp</result> -->
+		<result name = "getUserInfoSuccess">/me.jsp</result>
+		<result name = "updateUserSuccess">/me.jsp</result>
 		<result name = "getMyHouseListSuccess">/houses.jsp</result>
 		<result name = "getMyCollectListSuccess">/collect.jsp</result>
 		<result name = "getMyMessageListSuccess">/message.jsp</result>

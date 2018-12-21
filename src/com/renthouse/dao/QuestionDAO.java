@@ -10,7 +10,7 @@ import java.util.List;
 import com.renthouse.DataBase.Database;
 import com.renthouse.entity.Question;
 
-public class questionDAO {
+public class QuestionDAO {
 	
     Database db = new Database();
     
