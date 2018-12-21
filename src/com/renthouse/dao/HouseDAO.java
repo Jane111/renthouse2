@@ -4,7 +4,7 @@ import java.util.*;
 import com.renthouse.DataBase.Database;
 import com.renthouse.entity.House;
 
-public class houseDAO {
+public class HouseDAO {
 	
     Database db = new Database();
     
