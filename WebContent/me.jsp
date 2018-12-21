@@ -66,7 +66,7 @@
                         </div>
                         <br>
                         <!-- simple是为了去掉Struts自带的表单样式 -->
-                        <s:form name="userInfo" method="post" action="test!register" theme = "simple">
+                        <s:form name="userInfo" method="post" action="usercenter!updateUser" theme = "simple">
                         	<div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -81,7 +81,7 @@
                                         <label for="cont-number">新密码</label>
                                         <s:password class="form-control" name = "user_pwd" placeholder="请输入新密码"></s:password>
                                     </div> 
-
+                                    <s:hidden name="user_id" value="user_id"></s:hidden>
                                     <div class="form-group has-success">
                                         <label for="website">确认密码</label>
                                         <s:password class="form-control is-valid" name = "repeat_pwd" placeholder="请确认密码"></s:password>
@@ -91,8 +91,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <s:submit class="btn btn-general btn-blue mr-2" value="确定"/>  
-                            <s:reset class="btn btn-general btn-white" value="取消"/>
+                            <s:submit class="btn btn-info btn-blue mr-2" value="确定"/>  
+                            <s:reset class="btn btn-info btn-white" value="取消"/>
                         </s:form>
                     </div>
             	</div> 

@@ -11,7 +11,7 @@ import com.renthouse.entity.Reply;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-public class replyDAO {
+public class ReplyDAO {
 	
 	   Database db = new Database();
 
