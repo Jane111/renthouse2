@@ -4,7 +4,7 @@ import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-public class House {        //房屋信息实体类
+public class House {        //鎴垮眿淇℃伅瀹炰綋绫�
 	
 	private Integer houseId;
 	private Integer useId;
@@ -27,18 +27,24 @@ public class House {        //房屋信息实体类
 	private String houseRoomType;
 	private Double houseRoomArea;
 	private Date houseAddTime;
+	private String houseAdvert;  //标题字段
 	
 	
-//	private Set<Collect> setCollect=new HashSet<Collect>();//一个房屋可以被多次收藏
-//	private Set<Photo> setPhoto=new HashSet<Photo>();//一个房屋可以有多张照片
-//	private Set<Question> setQuestion=new HashSet<Question>();//一个房屋可以对应多个问题
+//	private Set<Collect> setCollect=new HashSet<Collect>();//涓�涓埧灞嬪彲浠ヨ澶氭鏀惰棌
+//	private Set<Photo> setPhoto=new HashSet<Photo>();//涓�涓埧灞嬪彲浠ユ湁澶氬紶鐓х墖
+//	private Set<Question> setQuestion=new HashSet<Question>();//涓�涓埧灞嬪彲浠ュ搴斿涓棶棰�
 	
 	private User aUser;
 	private Community aCommunity;
 	
-	
-	
-	
+	public String getHouseAdvert() {
+		return houseAdvert;
+	}
+
+	public void setHouseAdvert(String houseAdvert) {
+		this.houseAdvert = houseAdvert;
+	}
+
 	public User getaUser() {
 		return aUser;
 	}
@@ -247,13 +253,13 @@ public class House {        //房屋信息实体类
 		this.houseAddTime = houseAddTime;
 	}
 	
-	public House() {   //房屋无参构造方法
+	public House() {   //鎴垮眿鏃犲弬鏋勯�犳柟娉�
 		
 		
 	}
 	
-	public House(Integer houseBuilding,Integer houseUnit,Integer houseNum,Integer houseRoomNum,Integer houseHallNum,Integer houseBathroomNum,Double houseArea,String houseDirection,Double housePrice,Integer houseFloor,Integer houseTotalNum,String houseDecoration,String housePayType,String houseComment,String houseRentType,String houseRoomType,Double houseRoomArea,Date houseAddTime){
-		   //房屋含参构造方法
+	public House(Integer houseBuilding,Integer houseUnit,Integer houseNum,Integer houseRoomNum,Integer houseHallNum,Integer houseBathroomNum,Double houseArea,String houseDirection,Double housePrice,Integer houseFloor,Integer houseTotalNum,String houseDecoration,String housePayType,String houseComment,String houseRentType,String houseRoomType,Double houseRoomArea,Date houseAddTime,String houseAdvert){
+		   //鎴垮眿鍚弬鏋勯�犳柟娉�
 		this.houseBuilding = houseBuilding;
 		this.houseUnit = houseUnit;
 		this.houseNum = houseNum;
@@ -272,6 +278,7 @@ public class House {        //房屋信息实体类
 		this.houseRoomType = houseRoomType;
 		this.houseRoomArea = houseRoomArea;
 		this.houseAddTime = houseAddTime;
+		this.houseAdvert = houseAdvert;
 	}
 	
 
