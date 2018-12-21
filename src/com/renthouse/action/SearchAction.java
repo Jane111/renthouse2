@@ -8,7 +8,7 @@ import java.util.List;
 
 import com.renthouse.common.Constant;
 import com.opensymphony.xwork2.ActionSupport;
-import com.renthouse.dao.HouseDetail;
+import com.renthouse.dao.ShowHouse;
 import com.renthouse.dao.SearchDao;
 
 
@@ -27,13 +27,13 @@ public class SearchAction extends ActionSupport {
 	private Integer totalNum;//得到的总数
 	private Integer minPrice;//手动输入最小价格
 	private Integer maxPrice;//手动输入最大价格
-	private List<HouseDetail> houseList;//查询得到的房屋详情
+	private List<ShowHouse> houseList;//查询得到的房屋详情
 	
 	
-	public List<HouseDetail> getHouseList() {
+	public List<ShowHouse> getHouseList() {
 		return houseList;
 	}
-	public void setHouseList(List<HouseDetail> houseList) {
+	public void setHouseList(List<ShowHouse> houseList) {
 		this.houseList = houseList;
 	}
 	public Integer getPrice() {
@@ -122,7 +122,7 @@ public class SearchAction extends ActionSupport {
 	    }
 
 	    houseList=searchDao.getByCondition(value);//进行搜索，得到结果
-	     
+	    totalNum=houseList.size(); 
 	    
 //	    for(int i=1;i<=6;i++)
 //		{
@@ -133,9 +133,20 @@ public class SearchAction extends ActionSupport {
 //						
 //		}
 	     
-	    return "success";
+	    return "getSearch";
 
 	 }
+	
+	public String getAll() throws Exception{
+		
+	    houseList=searchDao.getByCondition(value);//进行搜索，得到结果
+	    totalNum=houseList.size(); 
+	    return "getAll";
+
+	 }
+	
+	
+	
 	
 
 

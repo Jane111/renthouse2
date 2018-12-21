@@ -12,7 +12,8 @@
 <package name="struts2" extends="struts-default">
 	
 	<action name="search" class = "com.renthouse.action.SearchAction">
-		<result name = "success">/search.jsp</result> 
+		<result name = "getAll">/search.jsp</result> 
+		<result name = "getSearch">/search.jsp</result>
 	</action>
 	
 	<action name="usercenter" class = "com.renthouse.action.UserCenterAction">

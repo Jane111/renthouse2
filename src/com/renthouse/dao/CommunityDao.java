@@ -21,7 +21,6 @@ public class CommunityDao {
 		re = db.execute(sql);
 		return re;
 	}
-	
 
 }
 

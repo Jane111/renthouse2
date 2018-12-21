@@ -24,8 +24,8 @@ public class SearchDao {
 	
 	String baseSql = "select user_name,com_name,com_area,com_street,"
 			+ "house_id,house_room_num,house_hall_num,house_area,house_direction,house_price,"
-			+ "house_floor,house_total_floor,house_decoration,house_pay_type,house_comment,house_advert,house_rent_type,house_room_area,house_add_time "
-			+ "from house inner join community on house.com_id = community.com_id INNER JOIN user on house.user_id=`user`.user_id ";
+			+ "house_floor,house_total_floor,house_decoration,house_pay_type,house_advert,house_rent_type,house_room_area,house_add_time "
+			+ "from house inner join community on house.com_id = community.com_id INNER JOIN user on house.user_id = user.user_id ";
 	
 	public void setSentence()//设置每个字段对应的数据库生成语句
 	{
@@ -38,29 +38,32 @@ public class SearchDao {
 	}
 			
 	
-	public List<HouseDetail> getByCondition(HashMap<Integer, Object> value){
+	public List<ShowHouse> getByCondition(HashMap<Integer, Object> value){
 
-		List<HouseDetail> list = new ArrayList<HouseDetail>();
+		List<ShowHouse> list = new ArrayList<ShowHouse>();
 		
 		setSentence();//构造生成语句的hash表
 		
 		int count=1;//用于添加where的计数
-		String completeSql="";//构造完全的sql语句
+		String completeSql=baseSql;//构造完全的sql语句
 		for(int i=1;i<=6;i++)
 		{
 			if(value.get(i)!=null)
 			{
 				if(count==1)//用于加上筛选条件的where
 				{
-					completeSql=baseSql+"where ";
+					completeSql+="where ";
 					count++;
 				}
 				completeSql+=sentence.get(i)+"'"+value.get(i)+"' AND ";	//通过sentence哈希表和value哈希表构造对应的sql语句					
 			}
 						
 		}
-		
-		completeSql=completeSql.substring(0,completeSql.length()-5);//从索引值开始查找,将最后一个添加AND去掉
+		if(count!=1)
+		{
+			completeSql=completeSql.substring(0,completeSql.length()-5);//从索引值开始查找,将最后一个添加AND去掉		
+		}
+	
 		
 		System.out.println(completeSql);
 		
@@ -68,7 +71,7 @@ public class SearchDao {
 		ResultSet rs = db.query(completeSql);
 		try {
 			while(rs.next()){
-				HouseDetail house = new HouseDetail();	
+				ShowHouse house = new ShowHouse();	
 				
 				house.setHouseId(rs.getInt("house_id"));
 				
@@ -82,8 +85,7 @@ public class SearchDao {
 				house.setHouseRoomNum(rs.getInt("house_room_num"));//几室
 				house.setHouseHallNum(rs.getInt("house_hall_num"));//几厅
 				
-				house.setHouseArea(rs.getDouble("house_area"));//平方米
-				house.setHouseRoomArea(rs.getDouble("house_room_area"));//房屋的面积
+				
 				
 				house.setHouseFloor(rs.getInt("house_floor"));//几层
 				house.setHouseTotalNum(rs.getInt("house_total_floor"));//总共几层
@@ -97,6 +99,18 @@ public class SearchDao {
 				house.setHouseAdvert(rs.getString("house_advert"));//宣传语
 				house.setHouseAddTime(rs.getDate("house_add_time"));//添加时间
 				
+				house.setPhotoUrl(getPhoto(rs.getInt("house_id")));//通过函数得到对应的照片
+				if(rs.getString("house_rent_type").equals("整租"))
+				{				
+					house.setArea(rs.getDouble("house_area"));
+				}
+				else
+				{
+					house.setArea(rs.getDouble("house_room_area"));
+				}
+//				house.setHouseArea(rs.getDouble("house_area"));//整租面积平方米
+//				house.setHouseRoomArea(rs.getDouble("house_room_area"));//合租房屋的面积
+				
 //				house.setHouseDecoration(rs.getString("house_decoration"));//装修类型				
 //				house.setHouseComment(rs.getString("house_comment"));//备注	
 //				house_room_type//主卧或是次卧
@@ -109,6 +123,21 @@ public class SearchDao {
 		return list;
 	}
 	
+	public String getPhoto(Integer houseId)
+	{
+		String photoUrl = null;
+		String sql = "select photo_url from photo where house_id="+houseId+" limit 1";//得到房间的一张照片
+		Database db = new Database();
+		ResultSet rs = db.query(sql);
+		try {
+			while(rs.next()){
+				photoUrl=rs.getString("photo_url");
+			}
+		} catch (SQLException e) {
+			System.out.println(e.toString() + sql);
+		}	
+		return photoUrl;
+	}
 //	
 //	public List<Book> getAll(){
 //		List<Book> list = new ArrayList<Book>();

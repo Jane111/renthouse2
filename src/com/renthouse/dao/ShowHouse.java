@@ -2,29 +2,32 @@ package com.renthouse.dao;
 
 import java.sql.Date;
 
-public class HouseDetail {
+public class ShowHouse {
 
 	//房屋基本信息
 	private Integer houseId;
+	private Date houseAddTime;
+	private String houseDecoration;
 //	private Integer houseBuilding;
 //	private Integer houseUnit;
 //	private Integer houseNum;
 	private Integer houseRoomNum;
 	private Integer houseHallNum;
 //	private Integer houseBathroomNum;
-	private Double houseArea;        
-	private String houseDirection;
-	private Double housePrice;
+	     
 	private Integer houseFloor;
 	private Integer houseTotalNum;
-	private String houseDecoration;
-	private String housePayType;
-	private String houseComment;
+
+
+//	private String houseComment;
 	private String houseAdvert;
-	private String houseRentType;
-	private String houseRoomType;
-	private Double houseRoomArea;
-	private Date houseAddTime;	
+
+//	private String houseRoomType;
+
+	//展示的面积
+	private Double Area;
+//	private Double houseArea;
+//	private Double houseRoomArea;
 	
 	//用户信息
 	private String userName;
@@ -33,8 +36,28 @@ public class HouseDetail {
 	private String comArea;
 	private String comStreet;
 	
+	private String houseDirection;
+	private String houseRentType;
+	private String housePayType;
+	
+	private Double housePrice;
+	
+	private String photoUrl;//展示的那一张照片
 	
 	
+	
+	public String getPhotoUrl() {
+		return photoUrl;
+	}
+	public void setPhotoUrl(String photoUrl) {
+		this.photoUrl = photoUrl;
+	}
+	public Double getArea() {
+		return Area;
+	}
+	public void setArea(Double area) {
+		Area = area;
+	}
 	public String getHouseAdvert() {
 		return houseAdvert;
 	}
@@ -47,24 +70,7 @@ public class HouseDetail {
 	public void setHouseId(Integer houseId) {
 		this.houseId = houseId;
 	}
-//	public Integer getHouseBuilding() {
-//		return houseBuilding;
-//	}
-//	public void setHouseBuilding(Integer houseBuilding) {
-//		this.houseBuilding = houseBuilding;
-//	}
-//	public Integer getHouseUnit() {
-//		return houseUnit;
-//	}
-//	public void setHouseUnit(Integer houseUnit) {
-//		this.houseUnit = houseUnit;
-//	}
-//	public Integer getHouseNum() {
-//		return houseNum;
-//	}
-//	public void setHouseNum(Integer houseNum) {
-//		this.houseNum = houseNum;
-//	}
+
 	public Integer getHouseRoomNum() {
 		return houseRoomNum;
 	}
@@ -77,18 +83,7 @@ public class HouseDetail {
 	public void setHouseHallNum(Integer houseHallNum) {
 		this.houseHallNum = houseHallNum;
 	}
-//	public Integer getHouseBathroomNum() {
-//		return houseBathroomNum;
-//	}
-//	public void setHouseBathroomNum(Integer houseBathroomNum) {
-//		this.houseBathroomNum = houseBathroomNum;
-//	}
-	public Double getHouseArea() {
-		return houseArea;
-	}
-	public void setHouseArea(Double houseArea) {
-		this.houseArea = houseArea;
-	}
+
 	public String getHouseDirection() {
 		return houseDirection;
 	}
@@ -125,30 +120,13 @@ public class HouseDetail {
 	public void setHousePayType(String housePayType) {
 		this.housePayType = housePayType;
 	}
-	public String getHouseComment() {
-		return houseComment;
-	}
-	public void setHouseComment(String houseComment) {
-		this.houseComment = houseComment;
-	}
 	public String getHouseRentType() {
 		return houseRentType;
 	}
 	public void setHouseRentType(String houseRentType) {
 		this.houseRentType = houseRentType;
 	}
-	public String getHouseRoomType() {
-		return houseRoomType;
-	}
-	public void setHouseRoomType(String houseRoomType) {
-		this.houseRoomType = houseRoomType;
-	}
-	public Double getHouseRoomArea() {
-		return houseRoomArea;
-	}
-	public void setHouseRoomArea(Double houseRoomArea) {
-		this.houseRoomArea = houseRoomArea;
-	}
+
 	public Date getHouseAddTime() {
 		return houseAddTime;
 	}

@@ -1,4 +1,4 @@
-package com.renthouse.common;
+package com.renthouse.util;
 
 import java.io.IOException;
 import java.util.ArrayList;

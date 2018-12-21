@@ -41,9 +41,10 @@
 <!--//end-smoth-scrolling-->
 </head>
 <body>
+
 	<!--banner-->
 	<div  id="home" class="banner about-banner" style = "min-height:160px !important">
-		<div class="banner-info" style = "min-height:160px !important">
+		<div class="banner-info" style = "min-height:280px !important">
 			<!--navigation-->
 			<div class="top-nav">
 				<nav>
@@ -72,7 +73,7 @@
 					</div>
 				</nav>
 			</div>	
-			<div class="banner-text"   style="padding-top:6em ">
+			<div class="banner-text"   style="padding-top:10em ">
 				<h2>WE'LL HELP YOU FIND YOUR DREAM HOME</h2>
 			</div> 
 			<!--//navigation-->
@@ -142,13 +143,14 @@
 
 	    </div>
 
-	    <div class="hasBeenSelected clearfix"><span id="time-num"><font><s:property value="#totalNum"/></font>家酒店</span>
+	    <div class="hasBeenSelected clearfix">
 	          <div style="float:right;" class="eliminateCriteria">【清空全部】 </div>
 	          <dl>
 	            <dt>已选条件：</dt>
 	            <dd style="" class="clearDd">
-	              <div class="clearList"></div></div>
-	          </dd></dl>
+	              <div class="clearList"></div>
+	          </dd>
+	          </dl>
 	        </div>
 	     
 	  </div>
@@ -156,62 +158,70 @@
 	</div>
 	<!-- //search -->
 	
+
+	
+	
+	<s:if test="houseList==null">   
+	   	<h3>哎呀，没有找到符合条件的房子</h3>
+	   	<h3>建议：看看上面的筛选条件是否合理</h3>
+	</s:if>
+	<s:else>
+	   	<s:bean name="com.renthouse.util.PriceComparator" var="priceComparator"/><!-- 用于实例化一个类 ，价格比较类-->
+		 <s:sort comparator="#priceComparator" source="houseList">
+			<s:iterator>
+			    <div class="w1201">
+					<div class="zu-itemmod" link="localhost:8080/renthouse/houseDetails.jsp?"+<s:property value="houseId"/> >
+				      <a 
+				        class="img" hidefocus="true" target="_blank"
+				        href="localhost:8080/renthouse/houseDetails.jsp?"+<s:property value="houseId"/>
+				        title=<s:property value="houseAdvert"/>
+				       ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
+				
+				            <img
+				                class="thumbnail" width="180" height="135"
+				                src= <s:property value="photoUrl"/>
+				                alt=<s:property value="houseAdvert"/>    
+				            />
+				        </a>
+				        <div class="zu-info">
+				            <h3>
+				                <a target="_blank"
+				                    title=<s:property value="houseAdvert"/>
+				                    href="localhost:8080/renthouse/houseDetails.jsp?"+<s:property value="houseId"/> 
+				                >
+				    
+				                	<s:property value="houseAdvert"/>
+				                	
+				                </a>
+				             </h3>
+				            <p class="details-item tag">
+				                <s:property value="houseRoomNum"/> 室 <s:property value="houseHallNum"/> 厅<span>|</span>
+				                <s:property value="Area"/> 平米<span>|</span>
+				                <s:property value="houseFloor"/> /<s:property value="houseTotalNum"/>层
+				                <i class="iconfont jjr-icon">&#xE147;</i>
+				                	<s:property value="userName"/>
+				            </p>
+				             <address class="details-item">
+					             <s:property value="comName"/>&nbsp;&nbsp;
+					              <s:property value="comArea"/>
+					               <s:property value="comStreet"/>
+				             </address>
+				                <p class="details-item bot-tag clearfix">
+				                    <span class="cls-1"><s:property value="houseRentType"/></span>
+				                    <span class="cls-2"><s:property value="houseDirection"/></span>
+				                     <span class="cls-3"><s:property value="housePayType"/></span>
+				                </p>
+				        </div>
+				        <div class="zu-side">
+				            <p><strong><s:property value="housePrice"/></strong>元/月</p>
+				        </div>
+				  </div>
+			  </div>
+			</s:iterator>
+		</s:sort>
+	</s:else>
+	
 	<!--information-->
-	<s:iterator value="houseList">
-	
-		<div class="w1201">
-			<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
-		      <a 
-		        class="img"
-		        data-sign="true"
-		        href="https://wh.zu.anjuke.com/fangyuan/1240407006"
-		        title="首月降800，每月返300，交通便利大智路保成社区北区"
-		        alt="首月降800，每月返300，交通便利大智路保成社区北区"
-		        target="_blank"
-		        hidefocus="true"
-		       ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
-		
-		            <img
-		                class="thumbnail"
-		                src="https://pic1.ajkimg.com/display/hj/39cde21bfe0b2a512a243fff98c44c57/240x180m.jpg?t=1"
-		                alt="首月降800，每月返300，交通便利大智路保成社区北区"
-		                width="180"
-		                height="135"
-		            />
-		            <span class="many-icons iconfont">&#xE062;</span>
-		        </a>
-		        <div class="zu-info">
-		            <h3>
-		                <a
-		                    target="_blank"
-		                    title="首月降800，每月返300，交通便利大智路保成社区北区"
-		                    _soj="Filter_1&hfilter=filterlist"
-		                    href="https://wh.zu.anjuke.com/fangyuan/1240407006"
-		                >首月降800，每月返300，交通便利大智路保成社区北区</a>
-		             </h3>
-		            <p class="details-item tag">
-		                3室1厅<span>|</span>18平米<span>|</span>3/20层<i class="iconfont jjr-icon">&#xE147;</i>宋卫宇
-		            </p>
-		             <address class="details-item">
-		                    <a target="_blank"
-		                        href="https://wuhan.anjuke.com/community/view/846149">保成社区北区
-		                    </a>&nbsp;&nbsp;
-		                                                江岸-大智路 江汉二路133号  
-		             </address>
-		                <p class="details-item bot-tag clearfix">
-		                    <span class="cls-1">合租</span>
-		                    <span class="cls-2">朝南</span>
-		                     <span class="cls-3">1/2/6号线</span>
-		                </p>
-		        </div>
-		        <div class="zu-side">
-		            <p><strong>680</strong>元/月</p>
-		        </div>
-		  </div>
-		 </div>
-		 
-	</s:iterator>
-	
 	 <div class="w1201">
 		<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
 	      <a 
