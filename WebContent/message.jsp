@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix ="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -55,7 +56,58 @@
         <div class="content-inner">
         	<!--***** FORM LAYOUTS *****-->
         	<div class="row">
-                
+                <div class="ds-post-main">
+					<div class="ylcon">
+						<h4 class="tit">所有留言</h4>
+						<hr>
+						
+						<div id="messDivId">
+							<div class="comment">
+								<div class="opbtn"></div>
+								<p class="comment_t">
+									<a
+									 class="img"
+									 data-sign="true"
+									 href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+									 title="首月降800，每月返300，交通便利大智路保成社区北区"
+									 alt="首月降800，每月返300，交通便利大智路保成社区北区"
+									 target="_blank"
+									 hidefocus="true"
+									>
+									首月降800，每月返300，交通便利大智路保成社区北区</a>
+								</p>
+								<p class="comment_time">2015/07/12 20:48</p>
+								<p class="comment_m">我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢他们的八卦呢</p>
+								<p class="comment_hf" id="reply">@剑花烟雨:的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契</p>
+								<p class="comment_hf" id="reply">@剑花烟雨:的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契</p>
+							</div>
+						</div>
+						<br>
+						
+						<div id="messDivId">
+							<div class="comment">
+								<div class="opbtn"></div>
+								<p class="comment_t">
+									<a
+									 class="img"
+									 data-sign="true"
+									 href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+									 title="首月降800，每月返300，交通便利大智路保成社区北区"
+									 alt="首月降800，每月返300，交通便利大智路保成社区北区"
+									 target="_blank"
+									 hidefocus="true"
+									>
+									首月降800，每月返300，交通便利大智路保成社区北区</a>
+								</p>
+								<p class="comment_time">2015/07/12 20:48</p>
+								<p class="comment_m">我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢他们的八卦呢</p>
+								<p class="comment_hf" id="reply">@剑花烟雨:的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契</p>
+							</div>
+						</div>
+						<br>
+						
+					</div>
+				</div>
         	</div>
         </div>
     </div>

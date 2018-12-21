@@ -10,7 +10,7 @@ public class Question {        //问题实体类
 	private Integer houseId;
 	private Integer userId;
 	private String questionContent;
-	private Date questionTime;
+	private String questionTime;
 	
 //	private Set<Reply> setReply=new HashSet<Reply>();//一个问题可以有多个回复
 	
@@ -82,11 +82,11 @@ public class Question {        //问题实体类
 		this.questionContent = questionContent;
 	}
 	
-	public Date getQuestionTime() {
+	public String getQuestionTime() {
 		return questionTime;
 	}
 	
-	public void setQuestionTime(Date questionTime) {
+	public void setQuestionTime(String questionTime) {
 		this.questionTime = questionTime;
 	}
 	
@@ -95,7 +95,7 @@ public class Question {        //问题实体类
 		
 	}
 	
-	public Question(Integer houseId,Integer userId,String questionContent,Date questionTime) {   //问题含参构造方法
+	public Question(Integer houseId,Integer userId,String questionContent,String questionTime) {   //问题含参构造方法
 		
 		this.houseId = houseId;
 		this.userId = userId;
@@ -103,7 +103,7 @@ public class Question {        //问题实体类
 		this.questionTime = questionTime;		
 	}
 	
-	public Question(Integer questionId,Integer houseId,Integer userId,String questionContent,Date questionTime) {
+	public Question(Integer questionId,Integer houseId,Integer userId,String questionContent,String questionTime) {
 		   //问题含参构造方法，含问题编号、房屋编号、用户编号
 		this.questionId = questionId;
 		this.houseId = houseId;

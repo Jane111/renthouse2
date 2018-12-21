@@ -8,7 +8,7 @@ public class Reply {        //回复实体类
 	private Integer questionId;
 	private Integer userId;
 	private String replyContent;
-	private Date replyTime;
+	private String replyTime;
 	
 // 	private User aUser;
 // 	private Question aQuestion;
@@ -63,11 +63,11 @@ public class Reply {        //回复实体类
 		this.replyContent = replyContent;
 	}
 	
-	public Date getReplyTime() {
+	public String getReplyTime() {
 		return replyTime;
 	}
 	
-	public void setReplyTime(Date replyTime) {
+	public void setReplyTime(String replyTime) {
 		this.replyTime = replyTime;
 	}
 	
@@ -76,7 +76,7 @@ public class Reply {        //回复实体类
 		
 	}
 	
-	public Reply(Integer questionId,Integer userId,String replyContent,Date replyTime) {   //用户含参构造方法
+	public Reply(Integer questionId,Integer userId,String replyContent,String replyTime) {   //用户含参构造方法
 		
 		this.questionId = questionId;
 		this.userId = userId;
@@ -84,7 +84,7 @@ public class Reply {        //回复实体类
 		this.replyTime = replyTime;
 	}
 	
-	public Reply(Integer replyId,Integer questionId,Integer userId,String replyContent,Date replyTime) {
+	public Reply(Integer replyId,Integer questionId,Integer userId,String replyContent,String replyTime) {
 		   //用户含参构造方法，含回复编号、问题编号、用户编号
 		this.replyId = replyId;
 		this.questionId = questionId;

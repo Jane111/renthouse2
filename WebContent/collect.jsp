@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix ="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -22,10 +23,9 @@
     <link rel="stylesheet" href="cssdyr/font-icon-style.css">
     <link rel="stylesheet" href="cssdyr/style.default.css" id="theme-stylesheet">
     <!-- Custom Theme files -->
-    <link rel="stylesheet" href="cssdyr/style.css">
+    <!-- <link rel="stylesheet" href="cssdyr/style.css"> -->
     <link rel="stylesheet" href="css/houselist.css">
 </head>
-
 <body> 
 
 <!--====================================================
@@ -58,51 +58,150 @@
         <div class="content-inner chart-cont">
 
             <!--***** CONTENT *****-->
-			<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
-			  <a
-			    class="img"
-			    data-sign="true"
-			    href="https://wh.zu.anjuke.com/fangyuan/1240407006"
-			    title="首月降800，每月返300，交通便利大智路保成社区北区"
-			    alt="首月降800，每月返300，交通便利大智路保成社区北区"
-			    target="_blank"
-			    hidefocus="true"
-			   ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
+            <div style="width:1000px;height:auto;margin:10px;overflow:hidden">
+            	<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
+				  <a
+				    class="img"
+				    data-sign="true"
+				    href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+				    title="首月降800，每月返300，交通便利大智路保成社区北区"
+				    alt="首月降800，每月返300，交通便利大智路保成社区北区"
+				    target="_blank"
+				    hidefocus="true"
+				   ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
+				
+				        <img
+				            class="thumbnail"
+				            src="https://pic1.ajkimg.com/display/hj/39cde21bfe0b2a512a243fff98c44c57/240x180m.jpg?t=1"
+				            alt="首月降800，每月返300，交通便利大智路保成社区北区"
+				            width="180"
+				            height="135"
+				        />
+				     <span class="many-icons iconfont">&#xE062;</span>
+				    </a>
+				    <div class="zu-info">
+				        <h3>
+				            <a
+				                target="_blank"
+				                title="首月降800，每月返300，交通便利大智路保成社区北区"
+				                _soj="Filter_1&hfilter=filterlist"
+				                href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+				            >首月降800，每月返300，交通便利大智路保成社区北区</a></h3>
+				        <p class="details-item tag">
+				            3室1厅<span>|</span>18平米<span>|</span>3/20层<i class="iconfont jjr-icon">&#xE147;</i>宋卫宇<span>|</span><i class="fa fa-star">已收藏</i></p>
+				        <address class="details-item">
+				            <a target="_blank"
+				                href="https://wuhan.anjuke.com/community/view/846149">保成社区北区</a>&nbsp;&nbsp;
+				                                        江岸-大智路 江汉二路133号  </address>
+				        <p class="details-item bot-tag clearfix">
+				            <span class="cls-1">合租</span>
+				            <span class="cls-2">朝南</span>
+				            <span class="cls-3">1/2/6号线</span>
+				            <span ></span>
+				        </p>
+				    </div>
+				    <div class="zu-side">
+				        <p><strong>680</strong>元/月</p>
+				    </div>
+				</div>
+            </div>
 			
-			        <img
-			            class="thumbnail"
-			            src="https://pic1.ajkimg.com/display/hj/39cde21bfe0b2a512a243fff98c44c57/240x180m.jpg?t=1"
-			            alt="首月降800，每月返300，交通便利大智路保成社区北区"
-			            width="180"
-			            height="135"
-			        />
-			     <span class="many-icons iconfont">&#xE062;</span>
-			    </a>
-			    <div class="zu-info">
-			        <h3>
-			            <a
-			                target="_blank"
-			                title="首月降800，每月返300，交通便利大智路保成社区北区"
-			                _soj="Filter_1&hfilter=filterlist"
-			                href="https://wh.zu.anjuke.com/fangyuan/1240407006"
-			            >首月降800，每月返300，交通便利大智路保成社区北区</a> </h3>
-			        <p class="details-item tag">
-			            3室1厅<span>|</span>18平米<span>|</span>3/20层<i class="iconfont jjr-icon">&#xE147;</i>宋卫宇</p>
-			        <address class="details-item">
-			            <a target="_blank"
-			                href="https://wuhan.anjuke.com/community/view/846149">保成社区北区</a>&nbsp;&nbsp;
-			                                        江岸-大智路 江汉二路133号  </address>
-			        <p class="details-item bot-tag clearfix">
-			            <span class="cls-1">合租</span>
-			            <span class="cls-2">朝南</span>
-			             <span class="cls-3">1/2/6号线</span>
-			        </p>
-			    </div>
-			    <div class="zu-side">
-			        <p><strong>680</strong>元/月</p>
-			    </div>
-			</div>
+			<div style="width:1000px;height:auto;margin:10px;overflow:hidden">
+            	<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
+				  <a
+				    class="img"
+				    data-sign="true"
+				    href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+				    title="首月降800，每月返300，交通便利大智路保成社区北区"
+				    alt="首月降800，每月返300，交通便利大智路保成社区北区"
+				    target="_blank"
+				    hidefocus="true"
+				   ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
+				
+				        <img
+				            class="thumbnail"
+				            src="https://pic1.ajkimg.com/display/hj/39cde21bfe0b2a512a243fff98c44c57/240x180m.jpg?t=1"
+				            alt="首月降800，每月返300，交通便利大智路保成社区北区"
+				            width="180"
+				            height="135"
+				        />
+				     <span class="many-icons iconfont">&#xE062;</span>
+				    </a>
+				    <div class="zu-info">
+				        <h3>
+				            <a
+				                target="_blank"
+				                title="首月降800，每月返300，交通便利大智路保成社区北区"
+				                _soj="Filter_1&hfilter=filterlist"
+				                href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+				            >首月降800，每月返300，交通便利大智路保成社区北区</a></h3>
+				        <p class="details-item tag">
+				            3室1厅<span>|</span>18平米<span>|</span>3/20层<i class="iconfont jjr-icon">&#xE147;</i>宋卫宇<span>|</span><i class="fa fa-star">已收藏</i></p>
+				        <address class="details-item">
+				            <a target="_blank"
+				                href="https://wuhan.anjuke.com/community/view/846149">保成社区北区</a>&nbsp;&nbsp;
+				                                        江岸-大智路 江汉二路133号  </address>
+				        <p class="details-item bot-tag clearfix">
+				            <span class="cls-1">合租</span>
+				            <span class="cls-2">朝南</span>
+				            <span class="cls-3">1/2/6号线</span>
+				            <span ></span>
+				        </p>
+				    </div>
+				    <div class="zu-side">
+				        <p><strong>680</strong>元/月</p>
+				    </div>
+				</div>
+            </div>
 			
+			
+			<div style="width:1000px;height:auto;margin:10px;overflow:hidden">
+            	<div class="zu-itemmod" link="https://wh.zu.anjuke.com/fangyuan/1240407006" _soj="Filter_1&hfilter=filterlist">
+				  <a
+				    class="img"
+				    data-sign="true"
+				    href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+				    title="首月降800，每月返300，交通便利大智路保成社区北区"
+				    alt="首月降800，每月返300，交通便利大智路保成社区北区"
+				    target="_blank"
+				    hidefocus="true"
+				   ><!-- target="_blank"表示打开新的网页；alt表示图片没有显示出来的时候显示的文本；hidefocus表示聚焦时没有虚线标识-->
+				
+				        <img
+				            class="thumbnail"
+				            src="https://pic1.ajkimg.com/display/hj/39cde21bfe0b2a512a243fff98c44c57/240x180m.jpg?t=1"
+				            alt="首月降800，每月返300，交通便利大智路保成社区北区"
+				            width="180"
+				            height="135"
+				        />
+				     <span class="many-icons iconfont">&#xE062;</span>
+				    </a>
+				    <div class="zu-info">
+				        <h3>
+				            <a
+				                target="_blank"
+				                title="首月降800，每月返300，交通便利大智路保成社区北区"
+				                _soj="Filter_1&hfilter=filterlist"
+				                href="https://wh.zu.anjuke.com/fangyuan/1240407006"
+				            >首月降800，每月返300，交通便利大智路保成社区北区</a></h3>
+				        <p class="details-item tag">
+				            3室1厅<span>|</span>18平米<span>|</span>3/20层<i class="iconfont jjr-icon">&#xE147;</i>宋卫宇<span>|</span><i class="fa fa-star">已收藏</i></p>
+				        <address class="details-item">
+				            <a target="_blank"
+				                href="https://wuhan.anjuke.com/community/view/846149">保成社区北区</a>&nbsp;&nbsp;
+				                                        江岸-大智路 江汉二路133号  </address>
+				        <p class="details-item bot-tag clearfix">
+				            <span class="cls-1">合租</span>
+				            <span class="cls-2">朝南</span>
+				            <span class="cls-3">1/2/6号线</span>
+				            <span ></span>
+				        </p>
+				    </div>
+				    <div class="zu-side">
+				        <p><strong>680</strong>元/月</p>
+				    </div>
+				</div>
+            </div>
         </div>
     </div> 
 
